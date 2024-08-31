@@ -1,0 +1,39 @@
+<!-- templates/orders.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+     <link rel="shortcut icon" href="/img/Captura de Tela (111).png" type="image/x-icon">
+    <title>Gerenciar Pedidos - Dedoca Gourmet</title>
+</head>
+<body class="ajuste">
+    <h2>Gerenciar Pedidos</h2>
+    <ul>
+        {% for order in orders %}
+            <li>
+                Pedido #{{ order.id }} - {{ order.created_at.strftime('%d/%m/%Y %H:%M') }}<br>
+                Status: {{ order.status }}<br>
+                Itens:
+                <ul>
+                    {% for item in order.items %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
+                </ul>
+                <form action="/order/{{ order.id }}/status" method="post">
+                    <label for="status">Atualizar Status:</label>
+                    <select name="status" id="status">
+                        <option value="Em processamento" {% if order.status == 'Em processamento' %}selected{% endif %}>Em processamento</option>
+                        <option value="Preparando" {% if order.status == 'Preparando' %}selected{% endif %}>Preparando</option>
+                        <option value="Pronto para entrega" {% if order.status == 'Pronto para entrega' %}selected{% endif %}>Pronto para entrega</option>
+                        <option value="Entregue" {% if order.status == 'Entregue' %}selected{% endif %}>Entregue</option>
+                    </select>
+                    <br>
+                    <button class="btn" id="btnat" type="submit">Atualizar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

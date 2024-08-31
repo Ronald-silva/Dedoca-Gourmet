@@ -1,0 +1,25 @@
+<!-- templates/create_order.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/Captura de Tela (111).png" type="image/x-icon">
+    <title>Realizar Pedido - Dedoca Gourmet</title>
+</head>
+<body class="ajuste">
+    <h2>Realizar Pedido</h2>
+    <form action="/order" method="post">
+        <ul>
+            {% for item in items %}
+                <li>
+                    <input type="checkbox" name="items" value="{{ item.id }}">
+                    {{ item.name }} - R$ {{ item.price }}
+                </li>
+            {% endfor %}
+        </ul>
+        <button class="btn" type="submit">Fazer Pedido</button>
+    </form>
+</body>
+</html>

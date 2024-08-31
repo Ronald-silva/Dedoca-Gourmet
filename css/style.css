@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C7E2C7;
+    color: #333;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 2rem;
+}
+/* Estilo principal de contêineres */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da página */
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Estilo para o formulário de login e outras páginas */
+form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: -1rem
+    
+}
+
+input[type="text"], 
+input[type="password"],
+textarea {
+    text-align: center;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Botões de ação */
+button, 
+input[type="submit"] {
+    background-color: #FF6347;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.ajuste {
+    margin-top: 8rem;
+}
+button:hover, 
+input[type="submit"]:hover {
+    background-color: #FF4500;
+}
+
+/* Estilo das tabelas e listas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+ul {
+    display: block;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+ul li {
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estilo para a imagem no login */
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 15%;
+    height: auto;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    border: 2px solid #FF6347;
+}
+
+#descript {
+    margin: 1rem;
+}
+
+.btn {
+    width: 50%;
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilo de responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    button, input[type="submit"] {
+        font-size: 1em;
+        padding: 8px;
+    }
+}

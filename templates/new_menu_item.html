@@ -1,0 +1,26 @@
+<!-- templates/new_menu_item.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/Captura de Tela (111).png" type="image/x-icon">
+    <title>Novo Item - Dedoca Gourmet</title>
+</head>
+<body class="ajuste">
+    <h2>Adicionar Novo Item ao Cardápio</h2>
+    <form action="/menu/new" method="post">
+        <label for="name">Nome do Prato:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label id="descript" for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="price">Preço:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <button class="btn" type="submit">Adicionar</button>
+    </form>
+</body>
+</html>
